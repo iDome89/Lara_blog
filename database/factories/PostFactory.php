@@ -25,7 +25,7 @@ class PostFactory extends Factory
                  return [
                      'username' => ('iDome89'),
                      'post_title' => $this->faker->title,
-                     'post_category' => $this->faker->name,
+                     'category_id' => rand(1,10),
                      'post_content' =>$this-> faker->paragraph
                  ];
     }
