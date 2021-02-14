@@ -23,9 +23,9 @@ class PostFactory extends Factory
     public function definition()
     {
                  return [
-                     'username' => ('iDome89'),
+                     'user_id' => (4),
                      'post_title' => $this->faker->title,
-                     'category_id' => rand(1,10),
+                     'category_id' => rand(2,8),
                      'post_content' =>$this-> faker->paragraph
                  ];
     }
