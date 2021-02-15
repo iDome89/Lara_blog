@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/post', [PostController::class, 'index'])->name('post');
 Route::post('/post', [PostController::class, 'store']);
+Route::delete('/post/{post}', [PostController::class, 'destroy'])->name('post.destroy');
+Route::get('/post/edit/{post}', [PostController::class, 'edit'])->name('post.edit');
+Route::put('/post/edit/{post}', [PostController::class, 'update']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
@@ -30,6 +33,9 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard/{post}', [PostController::class, 'show'])->name('dashboard.show');
+
+
 Route::get('/', function () { return view('layouts.master');
 })->name('home');
 

@@ -24,7 +24,7 @@ class PostFactory extends Factory
     {
                  return [
                      'user_id' => (4),
-                     'post_title' => $this->faker->title,
+                     'post_title' => $this->faker->realText($maxNbChars = 25),
                      'category_id' => rand(2,8),
                      'post_content' =>$this-> faker->paragraph
                  ];

@@ -14,11 +14,8 @@
             @foreach($posts as $post)
                 <tr>
                     <th scope="row">{{$post->id}}</th>
-                    <td>{{$post->post_title}}</td>
+                    <td><a href={{route('dashboard.show', $post)}}>{{$post->post_title}}</a></td>
                     <td>{{$post->created_at}}</td>
-                    <td>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </td>
                 </tr>
 
             @endforeach

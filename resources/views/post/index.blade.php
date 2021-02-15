@@ -60,6 +60,15 @@
                     <div class="card-footer">
                         <p class="text-muted">{{$post->created_at->diffForHumans()}}<p>
                         <h6>Category: {{$post->category->name}}</h6>
+
+                        @can('delete', $post)
+                            <a class="btn btn-primary" href={{route('post.edit', $post)}} >Edit</a>
+                            <form action={{route('post.destroy', $post)}} method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        @endcan
                     </div>
                 </div>
 
