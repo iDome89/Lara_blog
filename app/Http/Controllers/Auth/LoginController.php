@@ -30,7 +30,7 @@ class LoginController extends Controller
 
            return back()->with('status', 'Invalid User Credentials');
        }else {
-           return redirect()->route('dashboard');
+           return redirect()->route('post');
        }
     }
 }

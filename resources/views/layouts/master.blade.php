@@ -20,6 +20,7 @@
     <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav w-100">
             @auth
+                <li class="nav-item"><a href="{{ route('categories') }}" class="nav-link">Categories</a></li>
                 <li class="nav-item"><a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a></li>
                 <li class="nav-item"><a href="{{ route('post') }}" class="nav-link">Post</a></li>
                 <li class="nav-item ml-md-auto"><a class="nav-link disabled text-white">{{ auth()->user()->username }}</a>
