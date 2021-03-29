@@ -26,7 +26,7 @@ class DropCategoryColumnInPostsTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            Schema::dropIfExists('posts');
+            $table->string('post_category');
         });
     }
 }

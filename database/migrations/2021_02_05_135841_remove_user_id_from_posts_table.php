@@ -27,7 +27,8 @@ class RemoveUserIdFromPostsTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            $table->dropColumn('username');
+            $table->unsignedBigInteger('user_id');
         });
     }
 }
